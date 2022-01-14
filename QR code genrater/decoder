@@ -1,0 +1,12 @@
+import qrcode
+val = input("enter the text want to convert in Qr code")
+image  = qrcode.make(val)
+name = input("filename to be saved")
+image.save(name)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+import cv2
+Dqr = cv2.QRCodeDetector()
+image = input("give the path to the qe code to be decoded")
+val ,__ , _ = Dqr.detectAndDecode(cv2.imread(image)) 
+print("decoded text is : ", val)
